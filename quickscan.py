@@ -17,15 +17,21 @@ def main():
     parser.add_argument('url')
     parser.add_argument('-d',dest='delay',type=float,default=0)
     parser.add_argument('-t',dest='threadnum',default=10,type=int)
+    parser.add_argument('-p',dest='pl',default=0,type=int)
     args=parser.parse_args()
-    urls=re.split(',',args.url)#这是待进行解析的URL
-    ips=list()
-    for url in urls:
-        ipaddr=getIp(url)
-        ips.append(ipaddr)
-    ips=','.join(ips)#解析后的IP地址，通过","连接
-    scanner=Scanner(args)
-    scanner.Ms(ips)
+    if args.pl==1:
+        scan=Scanner(args)
+        scan.Ms(args.url)
+    else:
+        urls=re.split(',',args.url)#这是待进行解析的URL
+        ips=list()
+
+        for url in urls:
+            ipaddr=getIp(url)
+            ips.append(ipaddr)
+        ips=','.join(ips)#解析后的IP地址，通过","连接
+        scanner=Scanner(args)
+        scanner.Ms(ips)
 if __name__=='__main__':
     b=time.time()
     main()

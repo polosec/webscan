@@ -1,9 +1,0 @@
-[
-{   "ip": "58.87.64.85",   "timestamp": "1590419983", "ports": [ {"port": 80, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 50} ] }
-,
-{   "ip": "58.87.64.85",   "timestamp": "1590419984", "ports": [ {"port": 21, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 50} ] }
-,
-{   "ip": "39.156.66.18",   "timestamp": "1590419984", "ports": [ {"port": 80, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 51} ] }
-,
-{   "ip": "58.87.64.85",   "timestamp": "1590419984", "ports": [ {"port": 22, "proto": "tcp", "status": "open", "reason": "syn-ack", "ttl": 50} ] }
-]
