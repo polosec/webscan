@@ -20,7 +20,7 @@ class Scanner():
     def Ms(self,ip):
         if os.path.exists('res.json'):
             os.remove('res.json')
-        cmd = " masscan.exe " + ip + " -p 1-80 -oJ res.json --rate 10000"
+        cmd = " masscan.exe " + ip + " -p 1-10000 -oJ res.json --rate 10000"
         os.system(cmd)
         with open('res.json', 'r') as f:
             data = json.load(f)
